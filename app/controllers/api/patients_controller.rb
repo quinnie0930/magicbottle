@@ -1,7 +1,7 @@
-class Api::PatientController < ApplicationController
+class Api::PatientsController < ApplicationController
   def create
     if patient = Patient.create(patient_params)
-      render json: { userid: patient.id, username: patient.username }
+      render json: patient
     else
       render json: {}, status: :unprocessable_entity
     end
