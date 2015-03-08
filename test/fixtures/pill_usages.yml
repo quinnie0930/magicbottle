@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pill_id: 1
+  pill_taken: 1
+  feedback: MyText
+
+two:
+  pill_id: 1
+  pill_taken: 1
+  feedback: MyText
