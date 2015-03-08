@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dosage: 1
+  get_feedback_after: 1
+  empty_bottle_weight: 1.5
+  patient_id: 1
+  total_left: 1
+
+two:
+  name: MyString
+  dosage: 1
+  get_feedback_after: 1
+  empty_bottle_weight: 1.5
+  patient_id: 1
+  total_left: 1
