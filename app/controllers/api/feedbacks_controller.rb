@@ -1,7 +1,7 @@
 class Api::FeedbacksController < ApplicationController
   def create
     if params[:feedback][:pill_id].present?
-      pill = Pill.find_by(params[:feedback][:pill_id])
+      pill = Pill.find_by(id: params[:feedback][:pill_id])
       if pill
         feedback = pill.feedbacks.create(feedback_params)
         render json: feedback
@@ -10,6 +10,16 @@ class Api::FeedbacksController < ApplicationController
       end
     else
       render_unprocessable_entity
+    end
+  end
+
+  def index
+    pill = Pill.find_by(id: params[:pill_id])
+    feedbacks = pill.feedbacks if pill
+    if feedbacks
+      render json: feedbacks
+    else
+      render json: {}
     end
   end
 
