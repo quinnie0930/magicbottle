@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308012230) do
+ActiveRecord::Schema.define(version: 20150308015136) do
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer  "pill_id"
+    t.text     "comment"
+    t.datetime "time_after_pill_taken"
+    t.integer  "rating"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string   "first_name"

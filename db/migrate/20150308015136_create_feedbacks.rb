@@ -3,7 +3,8 @@ class CreateFeedbacks < ActiveRecord::Migration
     create_table :feedbacks do |t|
       t.integer :pill_id
       t.string :comment
-      t.integer :time_after_pill_taken
+      t.datetime :time_after_pill_taken
+      t.text :comment
       t.integer :rating
 
       t.timestamps null: false
