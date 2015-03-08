@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308015136) do
+ActiveRecord::Schema.define(version: 20150308103335) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.integer  "pill_id"
@@ -46,9 +46,10 @@ ActiveRecord::Schema.define(version: 20150308015136) do
     t.float    "empty_bottle_weight"
     t.integer  "patient_id"
     t.integer  "total_left"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.float    "pill_weight"
+    t.boolean  "taken",               default: false
   end
 
   create_table "reminders", force: :cascade do |t|
